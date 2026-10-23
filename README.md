@@ -1,83 +1,83 @@
 # Tähtisumu
 
-Tähtisumu on Godotilla toteutettu ylhäältä kuvattu avaruusräiskintäpeli. Ohjaa
-avaruusalusta, tuhoa aalto kerrallaan aluksia ja selviydy mahdollisimman pitkään
-kasvavan vaikeustason keskellä.
+Tähtisumu is a top-down space shooter made with Godot. Pilot your spacecraft,
+destroy waves of enemies and survive for as long as possible while the
+difficulty increases.
 
-## Pelin idea
+## Game concept
 
-Pelaaja puolustautuu avaruudessa lähestyviä vihollisia vastaan. Viholliset
-ilmestyvät pelikentän reunoilta ja hakeutuvat pelaajan luo. Aalto päättyy, kun
-kaikki sen viholliset on tuhottu, minkä jälkeen seuraava aalto alkaa suuremmalla
-vihollismäärällä.
+The player defends themselves against enemies approaching through space.
+Enemies spawn around the edges of the play area and move towards the player.
+A wave ends when all of its enemies have been destroyed, after which the next
+wave begins with more enemies.
 
-Peli päättyy, kun aluksen kaikki elämät ovat loppuneet. Tavoitteena on saavuttaa
-mahdollisimman monta aaltoa.
+The game ends when the spacecraft runs out of lives. The goal is to survive as
+many waves as possible.
 
-## Keskeiset ominaisuudet
+## Key features
 
-- Aaltoihin perustuva selviytymispeli, jossa vaikeustaso kasvaa etenemisen
-  myötä.
-- Hiirellä suunnattava avaruusalus ja ammuttavat projektiilit.
-- Kaksi vihollistyyppiä:
-  - tavallinen vihollinen, joka syöksyy kohti pelaajaa
-  - kestävämpi vihollinen, joka vaatii useita osumia
-- Dash-liike, joka antaa hetkeksi suuren nopeuden ja aktivoi suojakilven.
-  Suojakilven avulla vihollisia voi tuhota törmäämällä dashin aikana.
-- Portaalit, joiden avulla pelikentällä voi siirtyä nopeasti paikasta toiseen.
-- Vihollisista saatavat esineet:
-  - **Health** lisää yhden elämän
-  - **Rapid Fire** nopeuttaa ampumista hetkellisesti
-- Pelin aikainen HUD näyttää elämät, nykyisen aallon, aallon vihollismäärän
-  ja dashin latautumisen.
-- Tauotus, uudelleenaloitus ja paluu päävalikkoon.
-- Pixel art -grafiikka, animaatiot, äänitehosteet ja taustamusiikki.
+- Wave-based survival gameplay with increasing difficulty.
+- A mouse-aimed spacecraft and projectile-based combat.
+- Two enemy types:
+  - a regular enemy that charges towards the player
+  - a tougher enemy that requires multiple hits
+- A dash that temporarily gives the spacecraft a significant speed boost and
+  activates a shield. The shield allows the player to destroy enemies by
+  colliding with them during the dash.
+- Portals that allow the player to move quickly between locations in space.
+- Items dropped by enemies:
+  - **Health** adds one extra life
+  - **Rapid Fire** temporarily increases the firing speed
+- An in-game HUD showing lives, the current wave, the number of enemies in the
+  wave and the dash cooldown.
+- Pause, restart and main menu functionality.
+- Pixel art graphics, animations, sound effects and background music.
 
-## Ohjaus
+## Controls
 
-| Toiminto | Näppäin |
+| Action | Key |
 | --- | --- |
-| Liiku eteenpäin hiiren suuntaan | `W` + hiiri |
-| Liiku taaksepäin hiirestä poispäin | `S` + hiiri |
-| Liiku vasemmalle | `A` |
-| Liiku oikealle | `D` |
-| Ammu | hiiren vasen painike |
-| Dash ja suojakilpi | `Shift` |
-| Tauko | `Esc` |
+| Move forward towards the mouse | `W` + mouse |
+| Move backward away from the mouse | `S` + mouse |
+| Move left | `A` |
+| Move right | `D` |
+| Shoot | Left mouse button |
+| Dash and shield | `Shift` |
+| Pause | `Esc` |
 
-Alus kääntyy hiiren osoittamaan suuntaan. Dashilla on latausaika, joten sitä
-ei voi käyttää jatkuvasti.
+The spacecraft rotates towards the mouse cursor. The dash has a cooldown and
+cannot be used continuously.
 
-## Pelaaminen
+## How to play
 
-1. Valitse päävalikosta **New Game**.
-2. Liiku ja tähtää hiirellä.
-3. Ammu lähestyviä vihollisia ennen kuin ne osuvat alukseen.
-4. Käytä dashia sekä väistämiseen että vihollisten tuhoamiseen.
-5. Kerää vihollisten pudottamat esineet.
-6. Selvitä aallot ja yritä rikkoa oma ennätyksesi.
+1. Select **New Game** from the main menu.
+2. Move and aim with the mouse.
+3. Shoot approaching enemies before they hit the spacecraft.
+4. Use the dash both for evasion and for destroying enemies.
+5. Collect items dropped by enemies.
+6. Survive the waves and try to beat your high score.
 
-## Käynnistäminen
+## Running the game
 
-### Valmis Windows-versio
+### Windows release
 
-Jos käytössäsi on valmis Windows-julkaisu, käynnistä sen mukana toimitettu
-Windows-suoritettava tiedosto, esimerkiksi `Tähtisumu.exe`.
+If you are using the Windows release, launch the included executable, for
+example `Tähtisumu.exe`.
 
-### Godot-editorissa
+### In the Godot editor
 
-1. Asenna [Godot 4.3](https://godotengine.org/download/).
-2. Avaa tässä hakemistossa oleva `project.godot` Godot-editorissa.
-3. Käynnistä projekti painamalla **Play**. Päävalikko avautuu automaattisesti.
+1. Install [Godot 4.3](https://godotengine.org/download/).
+2. Open `project.godot` from this directory in the Godot editor.
+3. Press **Play** to launch the project. The main menu opens automatically.
 
-## Teknologia
+## Technology
 
 - [Godot Engine](https://godotengine.org/)
 - Godot 4.3
 - GDScript
-- 2D-peli ja yhteensopivuusrenderöijä
+- 2D game using the Compatibility renderer
 
-## Lisenssi
+## License
 
-Projekti on julkaistu MIT-lisenssillä. Lisätiedot löytyvät tiedostosta
-[`LICENSE`](LICENSE).
+This project is released under the MIT License. See [`LICENSE`](LICENSE) for
+more information.
