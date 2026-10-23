@@ -1,2 +1,0 @@
-# Tahtisumu
- Godot peli
